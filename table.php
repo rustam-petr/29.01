@@ -8,19 +8,21 @@ echo "<table >";
 echo "<th>Name</th>
       <th>Email</th>
       <th>Message</th>
-       <th>Time</th>";
+      <th>Time</th>";
 
 foreach ($records as $record) {
-    $row = explode("\n", trim($record));
+    
     date_default_timezone_set("Europe/Minsk");
-    $time=date("H:i:s\n");
-   
+    $time = date("H:i:s\n");
+
+    $row = explode("\n", trim($record));
+
     echo "
     <tr>
     <td>$row[0]</td>
     <td>$row[1]</td>
     <td>$row[2]</td>
-     <td> $time </td>
+    <td> $time</td>
     </tr>";
 }
 
