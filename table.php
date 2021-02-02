@@ -12,8 +12,8 @@ echo "<th>Name</th>
 
 foreach ($records as $record) {
     
-    date_default_timezone_set("Europe/Minsk");
-    $time = date("H:i:s\n");
+    // date_default_timezone_set("Europe/Minsk");
+    // $time = date("H:i:s\n");
 
     $row = explode("\n", trim($record));
 
@@ -22,7 +22,7 @@ foreach ($records as $record) {
     <td>$row[0]</td>
     <td>$row[1]</td>
     <td>$row[2]</td>
-    <td> $time</td>
+    <td> $row[3]</td>
     </tr>";
 }
 
